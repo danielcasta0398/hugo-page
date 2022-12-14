@@ -7,6 +7,7 @@
   font-family: 'Roboto', sans-serif;;
 }
 
+/*Esta clase envuelve toda mi aplicacion y donde defino el grid y su template*/
 .contain {
   display: grid;
   grid-template-columns: 1fr 140px;
@@ -47,6 +48,8 @@
   font-weight: 700;
 }
 
+/*Esta clase contiene mis imagenes principales aplico nuevamente grid
+y defino su estructura para que los contenedores hijos respeten este template*/
 #main {
   grid-column: 1/1;
   grid-row: 2/2;
@@ -130,7 +133,10 @@ footer {
   grid-column-end: auto;
 }
 
-/*@media (max-width: 880px) {
+
+/*Esta media cambiara mis estilos cuando la pantalla este en 880px o menor
+para adaptarse a dispositivos mobiles*/
+@media (max-width: 880px) {
   .menu {
     grid-column: 1/-1;
     grid-row: 2/2;
@@ -150,6 +156,9 @@ footer {
     font-size: 16px;
   }
 
+  /*Cuando aplico el auto-fill en mi grid, lo que me permite cuando mi contenedor 
+  no tiene mas espacio disponible para respetar su tamño lo pondra en una fila adicional
+  para generae el responsive*/
   #main {
     grid-row: 3/3;
     grid-column: 1/-1;
@@ -165,4 +174,4 @@ footer {
     gap: 3px;
     grid-template-columns: repeat(auto-fill, 500px);
   }
-}*/
+}
